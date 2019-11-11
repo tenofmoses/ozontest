@@ -15,22 +15,24 @@ const PageMobile = () => {
     let [ stopNextSwipe, setStopNextSwipe ] = useState(false)
     let [ stopPrewSwipe, setStopPrewSwipe ] = useState(true)
 
-    const nextSlideHandle = () => {
-        if (!stopNextSwipe && startNext === null) {
-            setStartNext(true)
+    const nextSlideHandle = event => {
+        if (!stopNextSwipe && event.changedTouches[0].pageX < startNext && startNext !== null) {
             setStartPrev(null)
             setStopNextSwipe(true)
             setStopPrewSwipe(false)
-        }
+            return
+        } 
+        setStartNext(event.changedTouches[0].pageX)
     }
 
-    const prevSlideHandle = () => {
-        if (!stopPrewSwipe && startPrev === null) {
-            setStartPrev(true)
+    const prevSlideHandle = event => {
+        if (!stopPrewSwipe && event.changedTouches[0].pageX > startPrev && startPrev === null) {
             setStartNext(null)
             setStopNextSwipe(false)
             setStopPrewSwipe(true)
+            return
         }
+        setStartPrev(event.changedTouches[0].pageX)
     }
 
     return (

@@ -86,6 +86,7 @@
         font-size: 1.5rem;
         padding: 1.5rem 0;
         border-radius: 0.1875rem;
+        cursor: pointer;
     }
     &__notice {
         max-width: 62.5rem;
@@ -109,6 +110,7 @@
     &__footer-item {
         text-align: center;
         flex: 1;
+        cursor: pointer;
     }
     &__footer-link {
         color: $ozonWhite;
@@ -172,4 +174,73 @@
 .checkbox:checked+label:after {
     opacity: 1;
     transform: scale(1);
+}
+
+@media (max-width: 1024px) {
+    .form {
+        max-width: 100%;
+        margin: 4.3125rem auto 0;
+        padding: 0.625rem;
+        height: calc(100vh - 13rem);
+        position: relative;
+        &__title {
+            font-size: 1.875rem;
+            line-height: 1.04;
+            margin-bottom: 1rem;;
+        }
+        &__wrapper {
+            display: block;
+        }
+        &__column-first {
+            width: 100%;
+            min-width: 100%;
+            margin-right: 0;
+            margin-bottom: 2em;
+        }
+        &__column-second {
+            min-width: 100%;
+            margin-right: 0;
+            margin-bottom: 2em;
+        }
+        &__item {
+            display: block;
+        }
+        &__item-social {
+            padding: 0.6875rem 2.5rem 0.6rem 0.8125rem;
+        }
+        &__item-vk{
+            top: 0.8rem;
+        }
+        &__item-ok {
+            top: 0.4rem;
+        }
+        &__item-fb {
+            top: 0.5em;
+        }
+        &__item-inst {
+            top: 0.47rem;
+        }
+        &__checkbox-item {
+            margin-bottom: 1rem;
+        }
+        &__button {
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 1.2rem 0;
+        }
+        &__notice-list {
+            padding-inline-start: 1em;
+        }
+        &__notice {
+            max-width: 100%;
+            margin-bottom: 2.25rem;
+        }
+        &__notice-item {
+            margin-bottom: 1rem;
+        }
+        &__footer {
+            display: block;
+            font-size: 1rem;
+        }
+    }
 }

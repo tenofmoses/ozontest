@@ -1,13 +1,16 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import hamburger from '../images/hamburger.svg';
+import cross from '../images/cross.svg';
 
 const Header = (props) => {
     const { location } = props
+    let [ show, setShow ] = useState(false)
     
     return (
         <Fragment>
-            <nav className="header">
+            <nav className={`header ${show ? 'header__visible' : ''}`}>
+                <div className="header__cross" onClick={() => setShow(false)}><img src={cross} /></div>
                 <ul className="header__list">
                     <li className={`header__item ${location.pathname === '/' ? 'header__item-active' : '' }`}>
                         <a href="/" className="header__item-link">О программе</a>
@@ -29,7 +32,9 @@ const Header = (props) => {
                     </li>
                 </ul>
             </nav>
-            <div className="header-mobile">
+            <div onClick={() => setShow(true)} className={`header-mobile__hamburger 
+                ${show ? 'header-mobile__hamburger-hide' : ''} 
+                ${location.pathname === '/' ? 'header-mobile__fixed' : ''}`}>
                 <img className="header-mobile__img" src={hamburger} />
             </div>
         </Fragment>
