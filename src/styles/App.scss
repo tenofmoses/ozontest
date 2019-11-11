@@ -1,10 +1,10 @@
 @import './FontsAndColors.scss';
 @import './Header.scss';
 @import './Page.scss';
+@import './PageMobile.scss';
 @import './Form.scss';
 
-html,
-body {
+html, body {
     min-height: 100%;
     padding: 0;
     margin: 0;
@@ -15,4 +15,10 @@ body {
     color: $ozonWhite;
     font-size: 1.112vw;
     cursor: default;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 5vw;
+    }
 }

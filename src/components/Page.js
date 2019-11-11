@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import mouse from '../images/mouse.svg'
-import center from '../images/center.png'
+import center_large from '../images/center_large.png'
+import center_medium from '../images/center_medium.png'
+import center_small from '../images/center_small.png'
 import letter_o from '../images/letter_o.svg'
 import letter_z from '../images/letter_z.svg'
 import letter_n from '../images/letter_n.svg'
@@ -19,9 +21,7 @@ const Page = () => {
     }
 
     return (
-        <div className="page"
-            onMouseMove={mouseMoveHandler} 
-            onAnimationEnd={() => setAnimationStart(false)}>
+        <div className="page" onMouseMove={mouseMoveHandler} onAnimationEnd={() => setAnimationStart(false)}>
             <div className="page__left">
                 <h1 className="page__title">Начните зарабатывать c&nbsp;крупнейшим <nobr>интернет-магазином!</nobr></h1>
                 <p className="page__description">Покупают ваши друзья, а&nbsp;зарабатываете&nbsp;вы!</p>
@@ -31,8 +31,10 @@ const Page = () => {
 
             <div className="page__right">
                 <picture className="page__central-img">
-                    <source type="image/png" srcSet={center} />
-                    <img src={center} alt="Девушка и парень" />
+                    <source type="image/png" srcSet={center_large} media="(max-width: 1440px)" />
+                    <source type="image/png" srcSet={center_medium} media="(max-width: 1024px)" />
+                    <source type="image/png" srcSet={center_small} />
+                    <img src={center_large} alt="Девушка и парень" />
                 </picture>
                 
                 <img src={letter_o} className="page__letter page__letter-o" alt="буква о" />
