@@ -64,6 +64,12 @@
                 width: 2rem;
             }
         }
+        &__item {
+            margin-right: -0.125rem;
+        }
+        &__item:hover {
+            border-color: transparent;
+        }
         &__list {
             display: block;
             margin-top: 3.8rem;
