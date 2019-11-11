@@ -1,0 +1,38 @@
+
+@font-face {
+    font-family: "GTEestiProDisplayRegular";
+    font-display: swap;
+    src: local('GTEestiProDisplayRegular'), url("./fonts/GTEestiProDisplayRegular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GTEestiProDisplayMedium';
+    font-display: swap;
+    src: url("./fonts/GTEestiProDisplayMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GTEestiProDisplayBold';
+    font-display: swap;
+    src: url("./fonts/GTEestiProDisplayBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'GTEestiProDisplayThin';
+    font-display: swap;
+    src: url("./fonts/GTEestiProDisplayThin.otf") format("opentype");
+}
+
+// Fonts variables
+
+$ozonRegular: "GTEestiProDisplayRegular", Arial, sans-serif;
+$ozonMedium: "GTEestiProDisplayMedium", Arial, sans-serif;
+$ozonBold: "GTEestiProDisplayBold", Arial, sans-serif;
+$ozonThin: "GTEestiProDisplayThin", Arial, sans-serif;
+
+
+// Colors variables
+$ozonBlue: #005BFF;
+$ozonPink: #F91155;
+$ozonWhite: #ffffff;
+$ozonWhiteOpacity: rgba(255, 255, 255, 0.2);

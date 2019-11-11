@@ -1,0 +1,137 @@
+.page {
+    max-width: 75rem;
+    padding: 0 10px;
+    margin: 8.813rem auto 0;
+    height: calc(100vh - 13rem);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    &__left {
+        width: 50%;
+        margin-left: -4rem;
+        position: relative;
+    }
+    &__title {
+        margin-bottom: 0.9rem;
+        font-family: $ozonBold;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        letter-spacing: 0.081rem;
+    }
+    &__description {
+        font-size: 1.5rem;
+        margin-bottom: 2.6rem;
+        line-height: 1.33;
+        letter-spacing: 0.02875rem;
+    }
+    &__button {
+        background-color: $ozonPink;
+        border-radius: 0.188rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        text-decoration: none;
+        color: $ozonWhite;
+        font-size: 1.5rem;
+        letter-spacing: 0.008rem;
+        padding: 1em 1.03125rem;
+        cursor: pointer;
+    }
+    &__mouse {
+        position: absolute;
+        bottom: 2.75rem;
+        width: 1.25rem;
+        height: 3.1875rem;
+        animation: mousemove 2s ease-in-out infinite;
+    }
+
+    &__right {
+        position: relative;
+        margin-left: -9rem;
+        width: 60%;
+    }
+    &__central-img {
+        position: absolute;
+        width: 39.0625rem;
+        height: 38rem;
+        right: 0.9375rem;
+        bottom: -0.5rem;
+        img {
+            width: 100%;
+        }
+    }
+    &__letter {
+        position: absolute;
+        animation: move 2s linear infinite;
+        animation-delay: 0.6s;
+        transition: all 1s;
+    }
+    &__stuff {
+        position: absolute;
+    }
+    &__letter-o {
+        bottom: 35.625rem;
+        right: 32.5rem;
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+    &__money {
+        bottom: 34.69rem;
+        right: 27.8125rem;
+        width: 6.25rem;
+        height: 4.6875rem;
+    }
+    &__letter-n {
+        bottom: 2.75rem;
+        right: 47.3125rem;
+        width: 5.625rem;
+        height: 6.2rem;
+    }
+    &__aim {
+        bottom: 7.75rem;
+        right: 42.1875rem;
+        width: 6.25rem;
+        height: 4.875rem;
+    }
+    &__letter-z {
+        bottom: 36.0625rem;
+        right: -1.875rem;
+        width: 4.875rem;
+        height: 6.2rem;
+    }
+    &__time {
+        bottom: 33.75rem;
+        right: 1.375rem;
+        width: 6.25rem;
+        height: 4.8125rem;
+    }
+    &__letter-second-o {
+        bottom: 4.125rem;
+        right: -9.0625rem;
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+    &__deal {
+        bottom: 8.5625rem;
+        right: -7.375rem;
+        width: 6.25rem;
+        height: 4.75rem;
+    }
+}
+
+
+@keyframes move {
+    0% { transform: translate3d(0, 0, 0); }
+    25% { transform: translate3d(3px, 0, 0); }
+    50% { transform: translate3d(0, 4px, 0); }
+    75% { transform: translate3d(-3px, 0, 0);  }
+    100% { transform: translate3d(0, 0, 0); } 
+}
+
+@keyframes mousemove {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(1rem); }
+    100% { transform: translateY(0); } 
+}
