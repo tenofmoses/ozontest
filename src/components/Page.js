@@ -33,7 +33,7 @@ const Page = () => {
                 <picture className="page__central-img">
                     <source type="image/png" srcSet={center_large} media="(max-width: 1440px)" />
                     <source type="image/png" srcSet={center_medium} media="(max-width: 1024px)" />
-                    <source type="image/png" srcSet={center_small} />
+                    <source type="image/png" srcSet={center_small} media="(max-width: 786px)" />
                     <img src={center_large} alt="Девушка и парень" />
                 </picture>
                 

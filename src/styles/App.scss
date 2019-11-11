@@ -19,6 +19,7 @@ html, body {
 
 @media (max-width: 768px) {
     html, body {
-        font-size: 5vw;
+        font-size: calc(100vh / 38);
     }
 }
+

@@ -25,18 +25,19 @@
     }
     &__wrapper {
         display: flex;
-        width: 200vh;
+        width: 230vw;
         position: relative;
         height: 100vh;
     }
     &__first-slide {
+        position: relative;
         width: 100vw;
-        height: calc(100vh - 6.25rem);
         box-sizing: border-box;
         padding-top: 5.3125rem;
         padding-left: 0.625rem;     
     }
     &__second-slide {
+        position: relative;
         width: 100vw;
         box-sizing: border-box;
         padding-top: 5.75rem;
@@ -69,7 +70,7 @@
         position: absolute;
         bottom: 0;
         max-width: 25.9375rem;
-        left: 7.475rem;
+        right: -13em;
         z-index: -1;
         img {
             width: 100%;
@@ -82,13 +83,6 @@
         width: 8.625rem;
         z-index: -3;
     }
-    &__letter-z {
-        position: absolute;
-        bottom: 8.3125rem;
-        left: 178vw;
-        width: 6.875rem;
-        z-index: -3;
-    }
     &__dots-first {
         position: absolute;
         bottom: 6.375rem;
@@ -96,17 +90,24 @@
         width: 6.625rem;
         z-index: -2;
     }
+    &__letter-z {
+        position: absolute;
+        bottom: 8.3125rem;
+        right: -2em;
+        width: 6.875rem;
+        z-index: -3;
+    }
     &__dots-second {
         position: absolute;
         bottom: 6.375rem;
-        left: 158vw;
+        right: 3.375rem;
         width: 6.625rem;
         z-index: -2;
     }
     &__zigzag {
         position: absolute;
         top: 2.6875rem;
-        left: 137vw;
+        right: 7.375rem;
         width: 5.1875rem;
         z-index: -2;
     }
@@ -114,7 +115,7 @@
         position: absolute;
         bottom: 16.0625rem;
         width: 5.25rem;
-        left: 163vw;
+        right: 3.375rem;
     }
 }
 
