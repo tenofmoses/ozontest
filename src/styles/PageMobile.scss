@@ -2,11 +2,14 @@
     display: none;
     height: 100vh;
     overflow: hidden;
-    position: relative;
+    position: fixed;
     min-height: 34rem;
+    overflow-x: scroll;
     &__lines {
         display: flex;
         padding: 0.8125rem 0.625rem 0;
+        width: 100vw;
+        box-sizing: border-box;
     }
     &__line {
         height: 0.125rem;
