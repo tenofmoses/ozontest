@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import mouse from '../images/mouse.svg'
 import center from '../images/center.png'
 import letter_o from '../images/letter_o.svg'
@@ -10,8 +10,18 @@ import money from '../images/money.svg'
 import time from '../images/time.svg'
 
 const Page = () => {
+    let [ animationStart, setAnimationStart ] = useState(false)
+
+    const mouseMoveHandler = () => {
+        if (!animationStart) {
+            setAnimationStart(true)
+        }
+    }
+
     return (
-        <div className="page">
+        <div className="page"
+            onMouseMove={mouseMoveHandler} 
+            onAnimationEnd={() => setAnimationStart(false)}>
             <div className="page__left">
                 <h1 className="page__title">Начните зарабатывать c&nbsp;крупнейшим <nobr>интернет-магазином!</nobr></h1>
                 <p className="page__description">Покупают ваши друзья, а&nbsp;зарабатываете&nbsp;вы!</p>
@@ -26,16 +36,16 @@ const Page = () => {
                 </picture>
                 
                 <img src={letter_o} className="page__letter page__letter-o" alt="буква о" />
-                <img src={money} className="page__stuff page__money" alt="кошелек" />
+                <img src={money} className="page__stuff page__money" alt="кошелек" style={{ animation: `${animationStart ? "moveImage 1s" : ''}` }}  />
 
                 <img src={letter_z} className="page__letter page__letter-z" alt="буква z" />
-                <img src={time} className="page__stuff page__time" alt="часы" />
+                <img src={time} className="page__stuff page__time" alt="часы" style={{ animation: `${animationStart ? "moveImage 1s" : ''}` }}  />
 
                 <img src={letter_n} className="page__letter page__letter-n" alt="буква n" />
-                <img src={aim} className="page__stuff page__aim" alt="цель" />
+                <img src={aim} className="page__stuff page__aim" alt="цель" style={{ animation: `${animationStart ? "moveImage 1s" : ''}` }}  />
 
                 <img src={letter_o} className="page__letter page__letter-second-o" alt="буква o" />
-                <img src={deal} className="page__stuff page__deal" alt="сделка" />
+                <img src={deal} className="page__stuff page__deal" alt="сделка" style={{ animation: `${animationStart ? "moveImage 1s" : ''}` }}  />
             </div>
         </div>
     );

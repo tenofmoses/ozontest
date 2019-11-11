@@ -130,6 +130,14 @@
     100% { transform: translate3d(0, 0, 0); } 
 }
 
+@keyframes moveImage {
+    0% { transform: translate3d(0, 0, 0); }
+    25% { transform: translate3d(-3px, 0, 0);  }
+    50% { transform: translate3d(0, 4px, 0); }
+    75% { transform: translate3d(3px, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); } 
+}
+
 @keyframes mousemove {
     0% { transform: translateY(0); }
     50% { transform: translateY(1rem); }
