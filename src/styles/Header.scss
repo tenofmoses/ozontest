@@ -38,7 +38,9 @@
 }
 
 .header-mobile {
-    display: none;
+    &__hamburger {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
