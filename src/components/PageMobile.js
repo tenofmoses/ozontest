@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import mouse from '../images/mouse.svg'
 import center_large from '../images/center_large.png'
 import center_medium from '../images/center_medium.png'
 import center_small from '../images/center_small.png'
