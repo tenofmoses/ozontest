@@ -8,25 +8,26 @@
         margin: 1.5rem 0 0;
     }
     &__item {
-        list-style: none;
-        padding: 0.438rem 0.938rem;
         font-size: 1rem;
         line-height: 1.188rem;
+        list-style: none;
         border: 1px solid transparent;
         border-radius: 0.125rem;
         letter-spacing: 0.008rem;
         margin-right: 1.188rem;
         cursor: pointer;
-        a {
-            text-decoration: none;
-            color: $ozonWhite;
-        }
     }
     &__item:last-child {
         margin-right: 0;
     }
     &__item:hover {
         border-color: $ozonWhite;
+    }
+    &__item-link {
+        display: inline-block;
+        padding: 0.438rem 0.938rem;
+        text-decoration: none;
+        color: $ozonWhite;
     }
     &__item-active {
         background-color: $ozonWhiteOpacity;

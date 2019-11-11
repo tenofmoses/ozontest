@@ -3,6 +3,7 @@
     padding: 0 10px;
     margin: 8.813rem auto 0;
     height: calc(100vh - 13rem);
+    min-height: 36rem;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -132,9 +133,8 @@
 
 @keyframes moveImage {
     0% { transform: translate3d(0, 0, 0); }
-    25% { transform: translate3d(-3px, 0, 0);  }
-    50% { transform: translate3d(0, 4px, 0); }
-    75% { transform: translate3d(3px, 0, 0); }
+    30% { transform: translate3d(-5px, 0, 0);  }
+    65% { transform: translate3d(5px, 0, 0); }
     100% { transform: translate3d(0, 0, 0); } 
 }
 

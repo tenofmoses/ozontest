@@ -8,15 +8,23 @@ const Header = (props) => {
         <nav className="header">
             <ul className="header__list">
                 <li className={`header__item ${location.pathname === '/' ? 'header__item-active' : '' }`}>
-                    <a href="/">О программе</a>
+                    <a href="/" className="header__item-link">О программе</a>
                 </li>
-                <li className="header__item">Спланировать доход</li>
-                <li className="header__item">Привилегии</li>
-                <li className="header__item">Поддержка</li>
+                <li className="header__item">
+                    <a href="#" className="header__item-link">Спланировать доход</a>
+                </li>
+                <li className="header__item">
+                    <a href="#" className="header__item-link">Привилегии</a>
+                </li>
+                <li className="header__item">
+                    <a href="#" className="header__item-link">Поддержка</a>
+                </li>
                 <li className={`header__item ${location.pathname === '/form' ? 'header__item-active' : '' }`}>
-                    <a href="/form">Стать Менеджером</a>
+                    <a href="/form" className="header__item-link">Стать Менеджером</a>
                 </li>
-                <li className="header__item">Бизнес Кабинет</li>
+                <li className="header__item">
+                    <a href="#" className="header__item-link">Бизнес Кабинет</a>
+                </li>
             </ul>
         </nav>
     );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import mouse from '../images/mouse.svg'
 import center from '../images/center.png'
 import letter_o from '../images/letter_o.svg'
