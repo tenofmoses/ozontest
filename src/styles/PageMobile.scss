@@ -117,14 +117,16 @@
         width: 5.25rem;
         right: 3.375rem;
     }
-}
-
-.arrow {
-    position: absolute;
-    right: 0.75rem;
-    bottom: 21.3125rem;
-    width: 1.5rem;
-    animation: arrow 900ms ease-in-out infinite;
+    &__arrow {
+        position: fixed;
+        right: 0.75rem;
+        bottom: 21.3125rem;
+        width: 1.5rem;
+        animation: arrow 1000ms ease-in-out infinite;
+        img {
+            width: 100%;
+        }
+    }
 }
 
 @media (max-width: 768px) {

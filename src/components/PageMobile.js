@@ -29,6 +29,11 @@ const PageMobile = () => {
         }
     }
 
+    const nextSlide = () => {
+        setStartPrev(!startPrev)
+        setStartNext(!startNext)
+    }
+
     return (
         <Swipe onSwipeMove={onSwipeMove}>
             <div className="page-mobile">
@@ -43,7 +48,6 @@ const PageMobile = () => {
                         <p className="page-mobile__description">Покупают ваши друзья, а&nbsp;зарабатываете&nbsp;вы!</p>
                         <img src={letter_o} className="page-mobile__letter-o" alt="буква о" />
                         <img src={dots} className="page-mobile__dots-first" alt="точки" />
-                        <img src={arrow} className="arrow" />
                         <picture className="page-mobile__central-img">
                             <source type="image/png" srcSet={center_large} media="(max-width: 1440px)" />
                             <source type="image/png" srcSet={center_medium} media="(max-width: 1024px)" />
@@ -60,6 +64,9 @@ const PageMobile = () => {
                         <img src={zigzag} className="page-mobile__zigzag" alt="zigzag" />
                         <img src={money} className="page-mobile__money" alt="кошелек" />
                     </div>
+                </div>
+                <div className="page-mobile__arrow">
+                    <img src={arrow}  onClick={nextSlide} alt="стрелка" />
                 </div>
             </div>
         </Swipe>
