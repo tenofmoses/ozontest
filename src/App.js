@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Page from './components/Page'
@@ -7,18 +7,6 @@ import Form from './components/Form'
 import './styles/App.scss'
 
 const App = () => {
-
-    useEffect(() => {
-        window.addEventListener('resize', calcFontHandler);
-        return () => window.removeAddEventListener('resize', calcFontHandler);
-    }, []);
-
-    const calcFontHandler = () => {
-        if (document.documentElement.clientHeight < 780) {
-            console.log(document)
-        } 
-    }
-
     return (
         <Router>
             <div className="app">

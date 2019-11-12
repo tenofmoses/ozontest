@@ -119,26 +119,22 @@
     }
 }
 
+.arrow {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 21.3125rem;
+    width: 1.5rem;
+    animation: arrow 900ms ease-in-out infinite;
+}
+
 @media (max-width: 768px) {
     .page-mobile {
         display: block;
     }
 }
 
-@keyframes slideNext {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100vw, 0);
-    }
-}
-
-@keyframes slidePrev {
-    0% {
-        transform: translate(-100vw, 0);
-    }
-    100% {
-        transform: translate(-0, 0);
-    }
+@keyframes arrow {
+    0% { transform: translateX(0) }
+    50% { transform: translateX(-10px) }
+    100% { transform: translateX(0) }
 }

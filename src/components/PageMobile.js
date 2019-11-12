@@ -8,13 +8,14 @@ import letter_z from '../images/letter_z.svg';
 import dots from '../images/dots.svg';
 import zigzag from '../images/zigzag.svg';
 import money from '../images/money.svg';
+import arrow from '../images/arrow.svg'
 
 
 const PageMobile = () => {
     let [startPrev, setStartPrev] = useState(true)
     let [startNext, setStartNext] = useState(false)
     let [start, setStart] = useState(false)
-    
+
     const onSwipeMove = (position) => {
         if (position.x > start) {
             setStartPrev(true)
@@ -42,6 +43,7 @@ const PageMobile = () => {
                         <p className="page-mobile__description">Покупают ваши друзья, а&nbsp;зарабатываете&nbsp;вы!</p>
                         <img src={letter_o} className="page-mobile__letter-o" alt="буква о" />
                         <img src={dots} className="page-mobile__dots-first" alt="точки" />
+                        <img src={arrow} className="arrow" />
                         <picture className="page-mobile__central-img">
                             <source type="image/png" srcSet={center_large} media="(max-width: 1440px)" />
                             <source type="image/png" srcSet={center_medium} media="(max-width: 1024px)" />
